@@ -1,0 +1,24 @@
+[project]
+name = "researher"
+version = "0.1.0"
+description = "researher using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "crewai[tools]==1.14.4"
+]
+
+[project.scripts]
+researher = "researher.main:run"
+run_crew = "researher.main:run"
+train = "researher.main:train"
+replay = "researher.main:replay"
+test = "researher.main:test"
+run_with_trigger = "researher.main:run_with_trigger"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"
